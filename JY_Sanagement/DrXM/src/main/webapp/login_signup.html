@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="app-ui">
+
+    <head>
+        <!-- Meta -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+        <!-- Document title -->
+        <title>Frontend - Login</title>
+
+        <meta name="description" content="AppUI - Frontend Template & UI Framework" />
+        <meta name="robots" content="noindex, nofollow" />
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" href="assets/img/favicons/apple-touch-icon.png" />
+        <link rel="icon" href="assets/img/favicons/favicon.ico" />
+
+        <!-- Google fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,900%7CRoboto+Slab:300,400%7CRoboto+Mono:400" />
+
+        <!-- AppUI CSS stylesheets -->
+        <link rel="stylesheet" id="css-font-awesome" href="assets/css/font-awesome.css" />
+        <link rel="stylesheet" id="css-ionicons" href="assets/css/ionicons.css" />
+        <link rel="stylesheet" id="css-bootstrap" href="assets/css/bootstrap.css" />
+        <link rel="stylesheet" id="css-app" href="assets/css/app.css" />
+        <link rel="stylesheet" id="css-app-custom" href="assets/css/app-custom.css" />
+        <!-- End Stylesheets -->
+    </head>
+
+    <body class="app-ui">
+        <div class="app-layout-canvas">
+            <div class="app-layout-container">
+
+                <!-- Header -->
+                <header class="app-layout-header">
+                    <nav class="navbar navbar-default p-y">
+                        <div class="container">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-navbar-collapse" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+                                <!-- Header logo -->
+                                <a class="navbar-brand" href="javascript:void(0)">
+                                    <img class="img-responsive" src="assets/img/logo/alogo-frontends.png" title="AppUI" alt="AppUI" />
+                                </a>
+                            </div>
+
+                            <div class="collapse navbar-collapse" id="header-navbar-collapse">
+
+                                <!-- Header navigation menu -->
+                                <ul id="main-menu" class="nav navbar-nav navbar-left">
+
+
+
+
+
+                                </ul>
+                                <!-- End header navigation menu -->
+                                <div class="collapse navbar-collapse" id="header-navbar-collapse2">
+                                    <!-- Header search form -->
+
+
+                                    <ul class="nav navbar-nav navbar-right navbar-toolbar hidden-sm hidden-xs">
+                                        <li>
+                                            <!-- Opens the modal found at the bottom of the page -->
+                                            <a href="javascript:void(0)" data-toggle="modal" data-target="#apps-modal"><i class="ion-grid"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .container -->
+                    </nav>
+                    <!-- .navbar -->
+                </header>
+                <!-- End header -->
+
+                <main class="app-layout-content">
+
+                    <!-- Page header -->
+                    <div class="page-header bg-blue bg-inverse">
+                        <div class="container">
+                            <!-- Section Content -->
+                            <div class="p-y-lg text-center">
+                                <h1 class="display-2">代理中心</h1>
+                                <p class="text-muted">无限的想法。无限的力量。无限的快乐。无限的机会。</p>
+                            </div>
+                            <!-- End Section Content -->
+                        </div>
+                    </div>
+                    <!-- End Page header -->
+
+                    <!-- Page content -->
+                    <div class="page-content">
+                        <div class="container">
+                            <div class="row">
+                                <!-- Login card -->
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <h3 class="card-header h4">登陆</h3>
+                                        <div class="card-block">
+                                            <form id="from1">
+                                                <div class="form-group">
+                                                    <input type="text" name="Username" class="form-control" id="frontend_login_email" placeholder="Name" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="password" name="Password" class="form-control" id="frontend_login_password" placeholder="Password" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="frontend_login_remember" class="css-input switch switch-sm switch-app">
+									<input type="text" id="frontend_login_remember" /><span></span> </a>
+								</label>
+                                                </div>
+                                                <input type="button" class="btn btn-app btn-block" style="background: #5bc0de" value="登录" onclick="agendajx()"/>
+                                            </form>
+                                        </div>
+                                        <!-- .card-block -->
+                                    </div>
+                                    <!-- .card -->
+                                </div>
+                                <!-- .col-md-6 -->
+                                <!-- End login -->
+
+                                <!-- Sign up -->
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <h3 class="card-header h4">注册</h3>
+                                        <div class="card-block">
+                                            <form class="form-horizontal" id="zcf1" method="post">
+                                                <div class="form-group">
+                                                    <div class="col-sm-6">
+                                                        <label class="sr-only" for="frontend_signup_username"></label>
+                                                        <input class="form-control" name="Username" type="text" id="frontend_signup_username" placeholder="Name" />
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <input class="form-control" name="Email" type="text" id="frontend_signup_email" placeholder="Email" />
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-sm-6">
+                                                        <label class="sr-only" for="frontend_signup_password">Password</label>
+                                                        <input class="form-control" name="Password" type="password" id="frontend_signup_password" placeholder="Password" />
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <!--
+                                                        <label class="sr-only" for="frontend_signup_confirm_password">Confirm Password</label>
+                                                        <input class="form-control" type="password" id="frontend_signup_confirm_password" placeholder="Confirm password" />
+                                                    --></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-xs-12">
+                                                        <label for="frontend_signup_terms" class="css-input switch switch-sm switch-app">
+										<input type="button" id="frontend_signup_terms" name="frontend_signup_terms" /><span></span> <a data-toggle="modal"  href="#"></a>
+									</label>
+                                                    </div>
+                                                </div>
+                                                <input class="btn btn-app btn-block" type="submit" style="background: #5bc0de" onclick="dlzhuce()" value="注册"/>
+                                            </form>
+                                        </div>
+                                        <!-- .card-block -->
+                                    </div>
+                                    <!-- .card -->
+                                </div>
+                                <!-- .col-md-6 -->
+                                <!-- End sign up -->
+
+                            </div>
+                            <!-- .row -->
+                        </div>
+                        <!-- .container -->
+                    </div>
+                    <!-- End page content -->
+
+                    <!-- Modal -->
+                    <div class="modal" id="modal-signup-terms" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="card-header bg-blue bg-inverse">
+                                    <h4>Terms &amp; Conditions</h4>
+                                    <ul class="card-actions">
+                                        <li>
+                                            <button data-dismiss="modal" type="button"><i class="ion-close"></i></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-block">
+                                    <p>             登录须知
+重要提示：
+1、请您在投稿前，仔细阅读投稿须知及投稿模版内容，系统内请写完整的作者信息，以便您的稿件得到及时处理。
+
+ 2、填写信息时，一定要填写完整的手机号码、邮寄地址，以方便给您寄杂志时，能及时联系到您（并请确保您的手机在投稿期内畅通）。
+
+3、自2019年10月01日起，需上传营业执照，系统上传无作者信息的全文稿件，附件上传有作者信息的全文稿件（请不要重复上传）。
+
+4、请您在稿件录用后下载版权转让协议书，填写后发邮件给我们，谢谢支持。</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-sm btn-default" type="button" data-dismiss="modal">拒绝</button>
+                                    <button class="btn btn-sm btn-app" type="button" data-dismiss="modal"><i class="ion-checkmark"></i> 同意</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End modal -->
+
+                </main>
+
+                
+
+            </div>
+            <!-- .app-layout-container -->
+        </div>
+        <!-- .app-layout-canvas -->
+
+        <!-- Apps Modal -->
+         <!-- Opens from the button in the header -->
+        <div id="apps-modal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-sm modal-dialog modal-dialog-top">
+                <div class="modal-content">
+                    <!-- Apps card -->
+                    <div class="card m-b-0">
+                        <div class="card-header bg-app bg-inverse">
+                            <h4>后台中心</h4>
+                            <ul class="card-actions">
+                                <li>
+                                    <button data-dismiss="modal" type="button"><i class="ion-close"></i></button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card-block">
+                            <div class="row text-center">
+                                <div class="col-xs-6">
+                                    <a class="card card-block m-b-0 bg-app-secondary bg-inverse" href="login_signup.html">
+                                        <i class="ion-speedometer fa-4x"></i>
+                                        <p style="font-size: 15px;">代理后台</p>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a class="card card-block m-b-0 bg-app-tertiary bg-inverse" href="login_signup_merchant.html">
+                                        <i class="ion-laptop fa-4x"></i>
+                                        <p style="font-size: 15px;">商家后台</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .card-block -->
+                    </div>
+                    <!-- End Apps card -->
+                </div>
+            </div>
+        </div>
+        <!-- End Apps Modal -->
+<script type="text/javascript">
+    function agendajx(){
+    $.ajax({
+        url: "alog",
+        dataType: "text",
+        data: $("#from1").serialize(),
+        success: function (data) {
+           if(data==="yes"){
+               location.href="index.html";
+           }else {
+               alert("输入有误");
+               location.href="login_signup.html";
+           }
+        }
+    })};
+</script>
+        <!-- AppUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock and App.js -->
+        <script src="assets/js/core/jquery.min.js"></script>
+        <script src="assets/js/core/bootstrap.min.js"></script>
+        <script src="assets/js/core/jquery.slimscroll.min.js"></script>
+        <script src="assets/js/core/jquery.scrollLock.min.js"></script>
+        <script src="assets/js/core/jquery.placeholder.min.js"></script>
+        <script src="assets/js/app.js"></script>
+        <script src="assets/js/app-custom.js"></script>
+    <script  type="text/javascript">
+        function dlzhuce() {
+            $.ajax({
+                url: "agenzc",
+                data: $("#zcf1").serialize(),
+                dataType: "text",
+                success: function (data) {
+                    alert(data)
+                    if (data == "sucess") {
+                        alert("注册成功！")
+                        location.href = "login_signup.html";
+                    } else {
+                        alert("注册失败");
+                    }
+                }
+            });
+        };
+    </script>
+
+    </body>
+
+</html>

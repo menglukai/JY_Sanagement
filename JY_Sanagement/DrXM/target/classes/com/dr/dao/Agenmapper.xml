@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dr.dao.Agenmapper">
+    <!--代理登录-->
+    <select id="agenSllog" parameterType="Map" resultType="Map">
+        select *from ag_user where ag_name=#{Username} and ag_pwd=#{Password} ;
+    </select>
+    <!--商户总数-->
+    <select id="agensummer" resultType="Map">
+select count(m_name)as mr_number from merchant_user
+    </select>
+    <!--顶置今日订单流水信箱-->
+    <select id="agendz" resultType="Map">
+select * from ag_overhead where ag_time=(select DATE_SUB(curdate(),INTERVAL 0 DAY));
+    </select>
+    <!--新增商户数量 营业额 月份-->
+    <select id="agenview" resultType="Map">
+ SELECT count(agm_name) as nb,sum(agm_payoff) as monay,DATE_FORMAT(agm_time,'%m') months FROM ag_shop GROUP BY months
+    </select>
+    <!--商户管理-->
+    <select id="agenmergl" resultType="Map">
+ select agm_name,agm_adress,agm_phone from ag_shop
+    </select>
+    <!--代理用户注册-->
+    <insert id="agenag" parameterType="Map">
+        insert into  ag_user values(#{Username},#{Password},null )
+    </insert>
+    <!--修改代理信息 -->
+
+    <update id="UpdateAgentMapper"  parameterType="Map" >
+     update ag_user  set ag_pwd=#{ag_pwd} where ag_name=#{ag_name}
+    </update>
+
+</mapper>

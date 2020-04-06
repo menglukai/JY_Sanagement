@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+
+<html class="app-ui">
+
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+    <!-- Document title -->
+    <title>Dashboard</title>
+
+    <meta name="description" content="AppUI - Admin Dashboard Template & UI Framework"/>
+    <meta name="author" content="rustheme"/>
+    <meta name="robots" content="noindex, nofollow"/>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="assets/img/favicons/apple-touch-icon.png"/>
+    <link rel="icon" href="assets/img/favicons/favicon.ico"/>
+
+    <!-- Google fonts -->
+    <link rel="stylesheet"
+          href="http://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,900%7CRoboto+Slab:300,400%7CRoboto+Mono:400"/>
+
+    <!-- Page JS Plugins CSS -->
+    <link rel="stylesheet" href="assets/js/plugins/slick/slick.min.css"/>
+    <link rel="stylesheet" href="assets/js/plugins/slick/slick-theme.min.css"/>
+
+    <!-- AppUI CSS stylesheets -->
+    <link rel="stylesheet" id="css-font-awesome" href="assets/css/font-awesome.css"/>
+    <link rel="stylesheet" id="css-ionicons" href="assets/css/ionicons.css"/>
+    <link rel="stylesheet" id="css-bootstrap" href="assets/css/bootstrap.css"/>
+    <link rel="stylesheet" id="css-app" href="assets/css/app.css"/>
+    <link rel="stylesheet" id="css-app-custom" href="assets/css/app-custom.css"/>
+    <!-- End Stylesheets -->
+</head>
+
+<body class="app-ui layout-has-drawer layout-has-fixed-header">
+<div class="app-layout-canvas">
+    <div class="app-layout-container">
+
+        <aside class="app-layout-drawer">
+
+            <!-- Drawer scroll area -->
+            <div class="app-layout-drawer-scroll">
+                <!-- Drawer logo -->
+                <div id="logo" class="drawer-header">
+                    <a href="index_merchant.html"><img class="img-responsive" src="assets/img/logo/alogo-backends.png"
+                                                       title="AppUI" alt="AppUI"/></a>
+                </div>
+
+                <!-- Drawer navigation -->
+                <!-- Drawer navigation -->
+                <nav class="drawer-main">
+                    <ul class="nav nav-drawer">
+
+                        <li class="nav-item nav-drawer-header">Apps</li>
+
+                        <li class="nav-item active" id="li0">
+                            <a href="index_merchant.html"><i class=\"ion-ios-speedometer-outline\"></i> 首页</a>
+                        </li>
+
+                        <li class="nav-item nav-drawer-header">Components</li>
+
+                        <li class="nav-item nav-item-has-subnav">
+                            <a href="javascript:void(0)"><i class="ion-ios-calculator-outline"></i> 门店管理</a>
+                            <ul class="nav nav-subnav">
+
+                                <li id="li1">
+                                    <a href="base_tables_responsive_merchant.html"> 门店列表</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item nav-item-has-subnav">
+                            <a href="javascript:void(0)"><i class="ion-ios-list-outline"></i> 员工管理</a>
+                            <ul class="nav nav-subnav">
+
+                                <li id="li2">
+                                    <a href="base_tables_responsive_staff.html"> 员工列表</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item nav-item-has-subnav">
+                            <a href="javascript:void(0)"><i class="ion-ios-browsers-outline"></i> 商品中心</a>
+                            <ul class="nav nav-subnav">
+
+                                <li id="li3">
+                                    <a href="base_tables_responsive_goolds.html"> 商品管理</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item nav-item-has-subnav">
+                            <a href="javascript:void(0)"><i class="ion-ios-browsers-outline"></i> 会员中心</a>
+                            <ul class="nav nav-subnav">
+
+                                <li id="li4">
+                                    <a href="base_tables_responsive_member.html"> 会员列表</a>
+                                </li>
+
+                                <li id="li5">
+                                    <a href="base_ui_cards.html"> 会员等级</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item nav-item-has-subnav">
+                            <a href="javascript:void(0)"><i class="ion-ios-browsers-outline"></i> 产品管理</a>
+                            <ul class="nav nav-subnav">
+
+                                <li id="li6">
+                                    <a href="base_tables_pricing_merchant.html"> 产品中心</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item nav-item-has-subnav">
+                            <a href="javascript:void(0)"><i class="ion-ios-browsers-outline"></i> 公众号</a>
+                            <ul class="nav nav-subnav">
+
+                                <li id="li7">
+                                    <a href="base_js_sliders.html"> 公众号管理</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+
+                    </ul>
+                </nav>
+                <!-- End drawer navigation -->
+            </div>
+            <!-- End drawer scroll area -->
+        </aside>
+        <!-- End drawer -->
+
+        <!-- Header -->
+        <header class="app-layout-header">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#header-navbar-collapse" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <button class="pull-left hidden-lg hidden-md navbar-toggle" type="button" data-toggle="layout"
+                                data-action="sidebar_toggle">
+                            <span class="sr-only">Toggle drawer</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="navbar-page-title">
+									首页
+								</span>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="header-navbar-collapse">
+
+                        <!-- .navbar-left -->
+
+                        <ul class="nav navbar-nav navbar-right navbar-toolbar hidden-sm hidden-xs">
+                            <li>
+                                <!-- Opens the modal found at the bottom of the page -->
+                                <a href="javascript:void(0)" data-toggle="modal" data-target="#apps-modal"><i
+                                        class="ion-grid"></i></a>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="javascript:void(0)" data-toggle="dropdown"><i class="ion-ios-bell"></i> <span
+                                        class="badge">3</span></a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li class="dropdown-header">Profile</li>
+                                    <li>
+                                        <a tabindex="-1" href="javascript:void(0)"><span
+                                                class="badge pull-right">3</span> News </a>
+                                    </li>
+                                    <li>
+                                        <a tabindex="-1" href="javascript:void(0)"><span
+                                                class="badge pull-right">1</span> Messages </a>
+                                    </li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown-header">More</li>
+                                    <li>
+                                        <a tabindex="-1" href="javascript:void(0)">Edit Profile..</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown dropdown-profile">
+                                <a href="javascript:void(0)" data-toggle="dropdown">
+                                    <span class="m-r-sm" id="merallusername"><span class="caret"></span></span>
+                                    <img class="img-avatar img-avatar-48" src="assets/img/avatars/avatar3.jpg"
+                                         alt="User profile pic"/>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li class="dropdown-header">
+                                        信息
+                                    </li>
+                                    <li id="li8">
+                                        <a href="base_pages_profile_Merchant.html">个人信息</a>
+                                    </li>
+                                    <li>
+                                        <a onclick="delmername()">退出</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- .navbar-right -->
+                    </div>
+                </div>
+                <!-- .container-fluid -->
+            </nav>
+            <!-- .navbar-default -->
+        </header>
+        <!-- End header -->
+
+        <main class="app-layout-content">
+
+            <!-- Page Content -->
+            <div class="container-fluid p-y-md">
+                <!-- Stats -->
+                <div class="row">
+                    <div class="col-sm-6 col-lg-3">
+                        <a class="card" href="javascript:void(0)">
+                            <div class="card-block clearfix">
+                                <div class="pull-right">
+                                    <p class="h6 text-muted m-t-0 m-b-xs">今日订单数</p>
+                                    <p class="h3 text-blue m-t-sm m-b-0" id="pointer1"></p>
+                                </div>
+                                <div class="pull-left m-r">
+                                    <span class="img-avatar img-avatar-48 bg-blue bg-inverse"><i
+                                            class="ion-ios-bell fa-1-5x"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- .col-sm-6 -->
+
+                    <div class="col-sm-6 col-lg-3">
+                        <a class="card bg-green bg-inverse" href="javascript:void(0)">
+                            <div class="card-block clearfix">
+                                <div class="pull-right">
+                                    <p class="h6 text-muted m-t-0 m-b-xs">订单总数</p>
+                                    <p class="h3 m-t-sm m-b-0" id="pointer2"></p>
+                                </div>
+                                <div class="pull-left m-r">
+                                    <span class="img-avatar img-avatar-48 bg-gray-light-o"><i
+                                            class="ion-ios-people fa-1-5x"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- .col-sm-6 -->
+
+                    <div class="col-sm-6 col-lg-3">
+                        <a class="card bg-blue bg-inverse" href="javascript:void(0)">
+                            <div class="card-block clearfix">
+                                <div class="pull-right">
+                                    <p class="h6 text-muted m-t-0 m-b-xs">昨日订单总金额</p>
+                                    <p class="h3 m-t-sm m-b-0" id="pointer3"></p>
+                                </div>
+                                <div class="pull-left m-r">
+                                    <span class="img-avatar img-avatar-48 bg-gray-light-o"><i
+                                            class="ion-ios-speedometer fa-1-5x"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- .col-sm-6 -->
+
+                    <div class="col-sm-6 col-lg-3">
+                        <a class="card bg-purple bg-inverse" href="javascript:void(0)">
+                            <div class="card-block clearfix">
+                                <div class="pull-right">
+                                    <p class="h6 text-muted m-t-0 m-b-xs">信箱</p>
+                                    <p class="h3 m-t-sm m-b-0"><span id="pointer10"></span></p>
+                                </div>
+                                <div class="pull-left m-r">
+                                    <span class="img-avatar img-avatar-48 bg-gray-light-o"><i
+                                            class="ion-ios-email fa-1-5x"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- .col-sm-6 -->
+
+                </div>
+                <!-- .row -->
+                <!-- End stats -->
+
+            </div>
+
+        </main>
+        <div id="container" style="height: 600px;width: 600px;border: #5bc0de 1px ;margin-left:380px;float: left">
+
+        </div>
+        <div id="container2"
+             style="height: 600px;width: 600px;border: #5bc0de 1px ;margin-right:200px;float: right">
+
+        </div>
+        <!-- col-lg-8 -->
+        <!-- End Company overview Chart -->
+
+        <!-- Weekly transactions Widget -->
+
+        <!-- .row -->
+    </div>
+    <!-- .container-fluid -->
+    <!-- End Page Content -->
+
+
+</div>
+<!-- .app-layout-container -->
+</div>
+<!-- .app-layout-canvas -->
+
+<!-- Apps Modal -->
+<!-- Opens from the button in the header -->
+<div id="apps-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-sm modal-dialog modal-dialog-top">
+        <div class="modal-content">
+            <!-- Apps card -->
+            <div class="card m-b-0">
+                <div class="card-header bg-app bg-inverse">
+                    <h4>后台中心</h4>
+                    <ul class="card-actions">
+                        <li>
+                            <button data-dismiss="modal" type="button"><i class="ion-close"></i></button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-block">
+                    <div class="row text-center">
+                        <div class="col-xs-6">
+                            <a class="card card-block m-b-0 bg-app-secondary bg-inverse" href="login_signup.html">
+                                <i class="ion-speedometer fa-4x"></i>
+                                <p style="font-size: 15px;">代理后台</p>
+                            </a>
+                        </div>
+                        <div class="col-xs-6">
+                            <a class="card card-block m-b-0 bg-app-tertiary bg-inverse"
+                               href="login_signup_merchant.html">
+                                <i class="ion-laptop fa-4x"></i>
+                                <p style="font-size: 15px;">商家后台</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- .card-block -->
+            </div>
+            <!-- End Apps card -->
+        </div>
+    </div>
+</div>
+<!-- End Apps Modal -->
+
+<div class="app-ui-mask-modal"></div>
+
+
+<!-- Page JS Code -->
+<script src="assets/js/pages/index.js"></script>
+
+
+<script src="JS/echarts.mins.js" type="text/javascript" charset="utf-8"></script>
+<script src="JS/jquery-3.4.1s.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+<!--张-->
+</script>
+<!-- AppUI Core JS: jQuery, Bootstrap, slimScroll, scrollLock and App.js -->
+<script src="assets/js/core/jquery.min.js"></script>
+<script src="assets/js/core/bootstrap.min.js"></script>
+<script src="assets/js/core/jquery.slimscroll.min.js"></script>
+<script src="assets/js/core/jquery.scrollLock.min.js"></script>
+<script src="assets/js/core/jquery.placeholder.min.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/app-custom.js"></script>
+<script type="text/javascript" src="JS/AllMerName.js"></script>
+<!-- Page Plugins -->
+<script src="assets/js/plugins/slick/slick.min.js"></script>
+<script src="assets/js/plugins/chartjs/Chart.min.js"></script>
+<script src="assets/js/plugins/flot/jquery.flot.min.js"></script>
+<script src="assets/js/plugins/flot/jquery.flot.pie.min.js"></script>
+<script src="assets/js/plugins/flot/jquery.flot.stack.min.js"></script>
+<script src="assets/js/plugins/flot/jquery.flot.resize.min.js"></script>
+<!--<script type="text/javascript" src="assets/js/pages/index_charts.js"></script>-->
+    <!-- 构造URL获取参数方法   -->
+<script type="text/javascript" >
+    $.ajax({
+        url:"merdz",
+        dataType:"text",
+        success :function (data) {
+            var str=eval("("+data+")");
+            $("#pointer1").append(str.td_order);
+            $("#pointer2").append(str.all_order);
+            $("#pointer3").append(str.yd_order);
+            $("#pointer10").append(str.m_mess+" New");
+        }
+    })
+</script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+<script type="text/javascript">
+    var myCharts1 = echarts.init(document.getElementById('container'));
+    myCharts1.setOption(  {title: {
+        text: '月份/订单',
+            left: 'left'
+    },
+    tooltip: {
+        trigger: 'axis',
+            axisPointer: {
+            type: 'cross',
+                crossStyle: {
+                color: '#999'
+            }
+        }
+    },
+    toolbox: {
+        feature: {
+            dataView: {show: true, readOnly: false},
+            restore: {show: true},
+            saveAsImage: {show: true},
+            magicType: {show: true, type: ['bar', 'line']}
+        }
+    },
+    legend: {
+        data: ['订单数']
+    },
+    xAxis: [
+        {
+            type: 'category',
+            data: [],
+            axisPointer: {
+                type: 'shadow'
+            }
+        }
+    ],
+        yAxis: [
+        {
+            type: 'value',
+            name: '订单数',
+
+        }
+    ],
+        series: [
+        {
+            name: '订单数',
+            type: 'line',
+            data: []
+        }
+    ]
+    });
+    var xdata = [];
+    var ydata = [];
+    $.ajax({
+        url: "mervw1",
+        dataType: "text",
+        success: function (result) {
+
+            var data= decodeURIComponent(result);
+
+            var jdata = eval("("+data+")");
+
+            for (var i in jdata) {
+                xdata.push(jdata[i].months);
+                ydata.push(jdata[i].nb);
+            };
+
+            myCharts1.setOption({
+                xAxis: [
+                    {
+                        data: xdata
+                    }
+                ], series: [
+                    {
+                        data: ydata
+                    }
+                ]
+            });
+        }
+    });
+    var myCharts00 = echarts.init(document.getElementById('container2'));
+    myCharts00.setOption({
+        title: {
+            text: '商品销售占比',
+            subtext: '',
+            left: 'center'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            bottom: 10,
+            left: 'center',
+            data: []
+        },
+        series: [
+
+            {
+                name: "排行",
+                type: 'pie',
+                radius: '65%',
+                center: ['50%', '50%'],
+                selectedMode: 'single',
+                data: []
+            }
+        ]
+    });
+      var test11 =({
+        title: {
+            text: '商品销售量',
+            left: 'center',
+            top: 20,
+            textStyle: {
+                color: '#ccc'
+            }
+        },
+
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+
+        visualMap: {
+            show: false,
+            min: 1,
+            max: 6000,
+            inRange: {
+                colorLightness: [0, 1]
+            }
+        },
+        series : [
+            {
+                name:'商品信息',
+                type:'pie',
+                radius : '70%',
+                center: ['50%', '50%'],
+                data:[
+
+                ].sort(function (a, b) { return a.value - b.value; }),
+                roseType: 'radius',
+                label: {
+                    normal: {
+                        textStyle: {
+                            color: 'rgba(255, 255, 255, 0.3)'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        lineStyle: {
+                            color: 'rgba(255, 255, 255, 0.3)'
+                        },
+                        smooth: 0.2,
+                        length: 10,
+                        length2: 20
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#c2135d',
+                        shadowBlur: 200,
+                        shadowColor: 'rgba(194,19,93,0.62)'
+                    }
+                },
+
+                animationType: 'scale',
+                animationEasing: 'elasticOut',
+                animationDelay: function (idx) {
+                    return Math.random() * 200;
+                }
+            }
+        ]
+    });
+    var namesaa = [];
+    var broweraa = [];
+    $.ajax({
+        url: "mervw2",
+        dataType: "text",
+        success: function (result) {
+
+            var data= decodeURIComponent(result);
+
+            var jdata = eval("("+data+")");
+
+            for (var i in jdata) {
+
+                namesaa.push(jdata[i].c_name);
+                broweraa.push({
+                    name: jdata[i].c_name,
+                    value: jdata[i].sb  
+                });
+
+                myCharts00.setOption({
+                    legend: {
+                        data: namesaa
+                    },
+                    series: [
+
+                        {
+                            data: broweraa
+                        }
+                    ]
+                });
+            };
+
+        }
+    });
+</script>
+
+
+<script type="text/javascript" src="JS/redisaelmername.js"></script>
+</body>
+
+</html>

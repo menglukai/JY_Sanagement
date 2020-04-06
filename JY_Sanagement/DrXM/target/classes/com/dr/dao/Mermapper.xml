@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dr.dao.Mermapper">
+    <!--登录 m_name m_pwd-->
+    <select id="mersecjy" parameterType="Map" resultType="Map">
+select * from merchant_user where m_name=#{Username} and m_pwd =#{Password}
+    </select>
+    <!--商户顶置信息 今日订单，订单总数，昨日订单，信箱 (td_order,all_order,yd_order,m_mess)-->
+    <select id="merdzsess" resultType="Map">
+          select td_order,all_order,yd_order,m_mess from merchant_overhead where to_days(ov_time) = to_days(now());
+    </select>
+    <!--月份订单比-->
+    <select id="mermpkm" resultType="Map">
+    select sum(c_number) nb,DATE_FORMAT(c_time,'%m') months from merchant_cargo GROUP BY months
+    </select>
+    <!--商品售量比-->
+    <select id="mercpkn" resultType="Map">
+select c_name,sum(c_number)as sb from merchant_cargo GROUP BY c_name
+    </select>
+    <!--门店管理-->
+    <select id="mermdgl" resultType="Map">
+select ms_name,ms_adress,ms_phone from merchant_shop
+    </select>
+    <!--员工管理-->
+    <select id="mersfgl" resultType="Map">
+select mstaff_name,madr_name,mstaff_phone,mstaff_job from merchant_staff
+    </select>
+    <!--商品中心-->
+    <select id="mercc" resultType="Map">
+select c_name,sum(c_number)as sb,c_price from merchant_cargo GROUP BY c_name
+    </select>
+    <!--会员表-->
+    <select id="mervip" resultType="Map">
+        select vip_number,vip_balance,vip_name,vip_phone from merchant_vip
+    </select>
+    <!--注册    UPDATE merchant_user SET m_name=#{Username}, m_pwd=#{Password} where m_verify=#{Mvrify}-->
+    <insert id="merzc" parameterType="Map">
+
+insert into  merchant_user values(#{Username},#{Password},null )
+    </insert>
+    <!--删除员工-->
+    <delete id="satffdel" parameterType="Map">
+     DELETE FROM merchant_staff where mstaff_name=#{mstaffname}
+    </delete>
+    <!--已下是分店内容-->
+    <!--月份订单占比-->
+    <select id="fd_mer_mpkm" parameterType="Map" resultType="Map">
+        select sum(c_number) nb,DATE_FORMAT(c_time,'%m') months from merchant_cargo where c_owner=#{fd_name} GROUP BY months
+    </select>
+    <!--商品销量占比-->
+    <select id="fd_mer_spkc" parameterType="Map" resultType="Map">
+select c_name,sum(c_number)as sb,c_price from merchant_cargo where c_owner=#{fd_name} GROUP BY c_name
+    </select>
+    <!--员工管理表-->
+    <select id="fd_mer_sf" parameterType="Map" resultType="Map">
+select mstaff_name,madr_name,mstaff_phone,mstaff_job from merchant_staff where mstaff_owner=#{fd_name}
+    </select>
+    <!--商品管理表-->
+    <select id="fd_mer_sc" parameterType="Map" resultType="Map">
+select c_name,sum(c_number)as sb,c_price from merchant_cargo where c_owner=#{fd_name} GROUP BY c_name
+    </select>
+    <!--vip客户表-->
+    <select id="fd_mer_vip" parameterType="Map" resultType="Map">
+ select vip_number,vip_balance,vip_name,vip_phone from merchant_vip where vip_owner=#{fd_name}
+    </select>
+    <!--商铺表-->
+    <select id="fd_mer_sp" parameterType="Map" resultType="Map">
+ select ms_name,ms_adress,ms_phone from merchant_shop where ms_owner=#{fd_name}
+    </select>
+    <!--修改商家信息 cxy-->
+
+    <update id="UpdateMerchantsMapper"  parameterType="Map" >
+     update cus_info set cus_password=#{cus_password} where cus_name=#{cus_name}
+    </update>
+
+</mapper>

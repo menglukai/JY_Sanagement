@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+    <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+<div id="container" style="height: 300px;width: 300px"></div>
+<script src="JS/echarts.mins.js" type="text/javascript" charset="utf-8"></script>
+<script src="JS/jquery-3.4.1s.js" type="text/javascript" charset="utf-8"></script>
+<!--
+<script type="text/javascript">
+    var dom = document.getElementById("container");
+    var myChart = echarts.init(dom);
+
+
+    myChart.setOption({
+        title: {
+            text: '商品销售占比',
+            left: 'left'
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                crossStyle: {
+                    color: '#999'
+                }
+            }
+        },
+        toolbox: {
+            feature: {
+                dataView: {show: true, readOnly: false},
+                restore: {show: true},
+                saveAsImage: {show: true}
+            }
+        },
+        legend: {
+            data:['订单数']
+        },
+        xAxis: [
+            {
+                type: 'category',
+                data: [],
+                axisPointer: {
+                    type: 'shadow'
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name: '订单数',
+
+            }
+        ],
+        series: [
+            {
+                name:'订单数',
+                type:'line',
+                data:[]
+            }
+        ]
+    });
+    var time = [];
+    var diposit = [];
+    $.ajax({
+        type:"get",
+        url:"Test3s.json",
+        dataType:"json",
+        success:function(result){
+            $.each(result.list,function(index,item){
+                time.push(item.time);
+                diposit.push(item.deposit);
+            });
+
+            myChart.setOption({
+                xAxis: [
+                    {
+                        data: time
+                    }
+                ], series: [
+                    {
+                        data:diposit
+                    }
+                ]
+            });
+        }
+    });
+
+</script>-->
+</body>
+</html>
